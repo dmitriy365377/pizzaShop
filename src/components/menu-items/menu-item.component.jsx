@@ -12,13 +12,15 @@ const MenuItem = (props) => (
                 backgroundImage: `url(${props.imageUrl})`
             }}
         />
-        <div className='content'>
+        <div className='content'
+        onClick={() => props.history.push('/menu')}
+        > 
             <h1 className='title'>{props.title.toUpperCase()}</h1>
             <span className='subtitle'>SHOP NOW</span>
         </div>
     </div> 
 )
-
+// props.history.push('/checkout')
 // onClick={() => props.history.push(`${props.match.url}${props.linkUrl}`)}
  
 export default withRouter(MenuItem)
